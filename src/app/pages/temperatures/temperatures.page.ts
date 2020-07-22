@@ -7,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TemperaturesPage implements OnInit {
   public temperatures = [
-    { name: 'Celsius', value: 1 },
-    { name: 'Fahrenheit', value: 1 },
+    { name: 'Celsius', value: 0 },
+    { name: 'Fahrenheit', value: 0 },
   ];
 
   constructor() {}
