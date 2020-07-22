@@ -15,46 +15,50 @@
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <ion-item class="ion-no-padding">
-      <ion-label>Peso</ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-col class="ion-text-center">
-        <ion-input
-          type="number"
-          (input)="calculate($event)"
-          [(ngModel)]="weight"
-          placeholder="Valor"
-          clearInput="true"
-          name="weight"
-          step="0.1"
-        ></ion-input>
-      </ion-col>
-    </ion-item>
-    <br />
-    <ion-item class="ion-no-padding">
-      <ion-label>Altura</ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-col class="ion-text-center">
-        <ion-input
-          type="number"
-          name="height"
-          step="0.01"
-          (input)="calculate($event)"
-          [(ngModel)]="height"
-          placeholder="Valor"
-          clearInput="true"
-        ></ion-input>
-      </ion-col>
-    </ion-item>
-    <br />
-    <ion-item>
-      <ion-col class="ion-text-center">
-        <ion-input type="text" [(ngModel)]="message" disabled></ion-input>
-      </ion-col>
-    </ion-item>
-    <br />
-  </ion-list>
+  <ion-card class="custom-box-shadow">
+    <ion-card-content>
+      <ion-list lines="none">
+        <ion-item class="ion-no-padding">
+          <ion-label>Peso</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-col class="ion-text-center">
+            <ion-input
+              type="number"
+              (input)="calculate($event)"
+              [(ngModel)]="weight"
+              placeholder="Valor"
+              clearInput="true"
+              name="weight"
+              step="0.1"
+            ></ion-input>
+          </ion-col>
+        </ion-item>
+        <br />
+        <ion-item class="ion-no-padding">
+          <ion-label>Altura</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-col class="ion-text-center">
+            <ion-input
+              type="number"
+              name="height"
+              step="0.01"
+              (input)="calculate($event)"
+              [(ngModel)]="height"
+              placeholder="Valor"
+              clearInput="true"
+            ></ion-input>
+          </ion-col>
+        </ion-item>
+        <br />
+        <ion-item>
+          <ion-col class="ion-text-center">
+            <ion-input type="text" [(ngModel)]="message" disabled></ion-input>
+          </ion-col>
+        </ion-item>
+        <br />
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
