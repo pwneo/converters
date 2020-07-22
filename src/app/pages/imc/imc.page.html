@@ -23,10 +23,12 @@
       <ion-col class="ion-text-center">
         <ion-input
           type="number"
-          (input)="calculate()"
-          [(ngModel)]="peso"
+          (input)="calculate($event)"
+          [(ngModel)]="weight"
           placeholder="Valor"
           clearInput="true"
+          name="weight"
+          step="0.1"
         ></ion-input>
       </ion-col>
     </ion-item>
@@ -38,8 +40,10 @@
       <ion-col class="ion-text-center">
         <ion-input
           type="number"
-          (input)="calculate()"
-          [(ngModel)]="altura"
+          name="height"
+          step="0.01"
+          (input)="calculate($event)"
+          [(ngModel)]="height"
           placeholder="Valor"
           clearInput="true"
         ></ion-input>

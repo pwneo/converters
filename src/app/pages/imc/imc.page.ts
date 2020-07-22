@@ -6,28 +6,35 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./imc.page.scss'],
 })
 export class ImcPage implements OnInit {
-  public peso: number = 0;
-  public altura: number = 0;
+  public weight: number = 0;
+  public height: number = 0;
   public message: string = '';
 
   constructor() {}
 
   ngOnInit() {
-    this.peso = 0.0;
-    this.altura = 0.0;
+    this.weight = 0.0;
+    this.height = 0.0;
   }
 
   calculate($event) {
     if (
-      this.peso === 0 ||
-      this.peso === undefined ||
-      this.altura === 0 ||
-      this.altura === undefined
+      this.height === 0 ||
+      this.height === null ||
+      this.weight === 0 ||
+      this.weight === null
     ) {
       return;
     }
-    const result = this.peso / Math.pow(this.altura, 2);
-    console.log(result);
+
+    const { name, value } = $event.target;
+    let result = null;
+    if (name === 'height') {
+      result = this.weight / Math.pow(value, 2);
+    } else {
+      result = value / Math.pow(this.height, 2);
+    }
+
     if (result < 18.5) {
       this.message = 'Abaixo do Peso';
     } else if (result >= 18.5 && result < 24.9) {
