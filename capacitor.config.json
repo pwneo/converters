@@ -1,6 +1,6 @@
 {
   "appId": "io.ionic.starter",
-  "appName": "medidor",
+  "appName": "Converters",
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "www",
