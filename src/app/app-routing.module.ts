@@ -5,11 +5,12 @@ const routes: Routes = [
   {
     path: 'home',
     loadChildren: () =>
-      import('./home/home.module').then((m) => m.HomePageModule),
+      import('./pages/home/home.module').then((m) => m.HomePageModule),
   },
   {
     path: 'imc',
-    loadChildren: () => import('./imc/imc.module').then((m) => m.ImcPageModule),
+    loadChildren: () =>
+      import('./pages/imc/imc.module').then((m) => m.ImcPageModule),
   },
   {
     path: '',
@@ -18,7 +19,14 @@ const routes: Routes = [
   },
   {
     path: 'km-to-mi',
-    loadChildren: () => import('./km-to-mi/km-to-mi.module').then( m => m.KmToMiPageModule)
+    loadChildren: () =>
+      import('./pages/km-to-mi/km-to-mi.module').then(
+        (m) => m.KmToMiPageModule
+      ),
+  },
+  {
+    path: 'temperatures',
+    loadChildren: () => import('./pages/temperatures/temperatures.module').then( m => m.TemperaturesPageModule)
   },
 ];
 

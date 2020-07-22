@@ -1,0 +1,40 @@
+ion-toolbar {
+  --background: #26c6da !important;
+  --color: white;
+  font-family: Raleway;
+}
+
+.sc-ion-label-md-h {
+  --color: initial;
+  display: block;
+  color: var(--color);
+  font-family: var(--ion-font-family, inherit);
+  font-size: inherit;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding-left: 0;
+}
+
+.item-native {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+ion-item {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+ion-label {
+  border-bottom: 0;
+}
+
+ion-input {
+  border-bottom: 0;
+}

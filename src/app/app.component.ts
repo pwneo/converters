@@ -31,7 +31,18 @@ export class AppComponent {
     this.pages = [
       { url: 'home', icon: 'home', text: 'Home', direction: 'root' },
       { url: 'imc', icon: 'flame', text: 'IMC', direction: 'forward' },
-      { url: '/km-to-mi', icon: 'speedometer', text: 'Velocidades', direction: 'forward' },
+      {
+        url: '/km-to-mi',
+        icon: 'speedometer',
+        text: 'Velocidades',
+        direction: 'forward',
+      },
+      {
+        url: '/temperatures',
+        icon: 'thermometer',
+        text: 'Temperaturas',
+        direction: 'forward',
+      },
     ];
 
     this.platform.ready().then(() => {
