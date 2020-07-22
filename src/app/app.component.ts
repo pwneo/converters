@@ -7,9 +7,18 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
-  styleUrls: ['app.component.scss']
+  styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
+  public menuId = 'main-menu';
+
+  public pages: {
+    url: string;
+    icon: string;
+    text: string;
+    direction: 'forward' | 'back' | 'root';
+  }[];
+
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
@@ -19,6 +28,12 @@ export class AppComponent {
   }
 
   initializeApp() {
+    this.pages = [
+      { url: 'home', icon: 'home', text: 'Home', direction: 'root' },
+      { url: 'imc', icon: 'flame', text: 'IMC', direction: 'forward' },
+      { url: '/km-to-mi', icon: 'speedometer', text: 'Velocidades', direction: 'forward' },
+    ];
+
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
       this.splashScreen.hide();

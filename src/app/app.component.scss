@@ -1,0 +1,27 @@
+ion-toolbar {
+  --background: #26c6da !important;
+  --color: white !important;
+}
+
+ion-content {
+  --background: #e0f7fa !important;
+}
+
+ion-item {
+  --background: #e0f7fa !important;
+}
+
+ion-icon {
+  color: #006064;
+}
+.list-md {
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  background: #e0f7fa;
+}
